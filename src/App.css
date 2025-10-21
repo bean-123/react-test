@@ -16,18 +16,18 @@
 
 .container {
   margin-top: 5px;
-  padding: 10rem;
+  padding: 9rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
   background-color: #4ca9c9;
-  height: 54vh;
+  height: 55vh;
 }
 
 .footer {
   margin-top: 5px;
-  padding: 10px;
+  padding: 20px;
   background-color: #4ca9c9;
   display: flex;
   justify-content: center;
