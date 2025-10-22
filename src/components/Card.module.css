@@ -2,13 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: left;
+  text-align: center;
   min-width: 200px;
   background-color: white;
-  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  min-height: 150px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  min-height: 200px;
 }
 
 .name {
@@ -21,5 +20,4 @@
 .title,
 .age {
   font-size: 14px;
-  margin-bottom: 8px;
 }
