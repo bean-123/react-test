@@ -1,34 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../src/App.css";
 import Card from "../components/Card";
 import Counter from "../components/Counter";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 // import useCounter from "./hooks/useCounter";
-import data from "../data";
 import Form from "../components/Form";
+import axios from "axios";
 
 function Home() {
   // const [ count, setCount ] = useCounter; // Using custom hook
   const [count, setCount] = useState(0);
-  const [employees, setEmployees] = useState(data);
+  const [employees, setEmployees] = useState([]);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     age: "",
   });
 
+  useEffect(() => {
+    axios.get("http://localhost:3001/employees").then((response) => {
+      setEmployees(response.data);
+    });
+  }, []);
+
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:3001/employees/${id}`).then(() => {
+      setEmployees(employees.filter((employee) => employee.id !== id));
+    });
+  };
+
   const handleClick = () => {
-    setEmployees([
-      ...employees,
-      {
-        id: employees.length + 1,
-        name: formData.name, // if we have a form we would do it like formData.name.value
-        title: formData.title, // formData.title.value
-        age: formData.age, // formData.age.value
+    axios
+      .post("http://localhost:3001/employees", {
+        id: String(employees.length + 1),
+        name: formData.name,
+        title: formData.title,
+        age: formData.age,
         isFavourite: false,
-      },
-    ]);
+      })
+      .then((response) => {
+        setEmployees([...employees, response.data]);
+      });
   };
 
   const toggleFavourite = (id) => {
@@ -65,6 +78,7 @@ function Home() {
                 // isFavourite={employee.isFavourite}
                 {...employee} // you can use this bc u deconstructed it in Card
                 toggleFavourite={toggleFavourite}
+                handleDelete={handleDelete}
               />
             );
           })}
