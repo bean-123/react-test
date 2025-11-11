@@ -1,11 +1,14 @@
 import styles from "./Card.module.css";
 
-const Card = (props) => {
+const Card = ({ name, title, age, isFavourite, toggleFavourite, id }) => {
+  // if you deconstruct them here, you can just put {...employee} in app
   return (
     <div className={styles.card}>
-      <h2 className={styles.name}>{props.name}</h2>
-      <p className={styles.title}>Title: {props.title} </p>
-      <p className={styles.age}>Age: {props.age}</p>
+      <button onClick={() => toggleFavourite(id)}>Toggle Favourite</button>
+      <h2 className={styles.name}>{name}</h2>
+      <p className={styles.title}>Title: {title} </p>
+      <p className={styles.age}>Age: {age}</p>
+      <div className={styles.favourite}>{isFavourite && <span>❤️</span>}</div>
     </div>
   );
 };
