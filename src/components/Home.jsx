@@ -61,7 +61,6 @@ function Home() {
   return (
     <>
       <div>
-        <Header />
         <div className="container">
           {employees.map((employee) => {
             console.log(employee); //if you want to do console.log or any edits the data you need to put this all in {}
@@ -89,7 +88,6 @@ function Home() {
             handleClick={handleClick}
           />
         </div>
-        <Footer count={count} setCount={setCount} />
       </div>
     </>
   );

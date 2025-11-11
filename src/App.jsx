@@ -1,8 +1,9 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
 import "./App.css";
 // import { BrowserRouter, Routes, Route, createBrowserRouter } from "react-router";
 import About from "./components/About";
 import Home from "./components/Home";
+import Layout from "./Layout";
 
 // function App() {
 //   return (
@@ -19,11 +20,18 @@ import Home from "./components/Home";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        index: true, // can only have one,its the home
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+    ],
   },
 ]);
 
