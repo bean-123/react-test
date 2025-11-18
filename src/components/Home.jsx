@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 // import useCounter from "./hooks/useCounter";
 import Form from "../components/Form";
 import axios from "axios";
+import { useSearchParams } from "react-router";
 
 function Home() {
   // const [ count, setCount ] = useCounter; // Using custom hook
@@ -18,21 +19,33 @@ function Home() {
     age: "",
   });
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    axios.get("http://localhost:3001/employees").then((response) => {
-      setEmployees(response.data);
-    });
+    //common error when handling loading state:
+    //setLoading(true)
+    axios
+      .get("http://localhost:3002/employees")
+      .then((response) => {
+        setEmployees(response.data);
+      })
+      .catch((error) => {
+        console.log("Error: ", error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/employees/${id}`).then(() => {
+    axios.delete(`http://localhost:3002/employees/${id}`).then(() => {
       setEmployees(employees.filter((employee) => employee.id !== id));
     });
   };
 
   const handleClick = () => {
     axios
-      .post("http://localhost:3001/employees", {
+      .post("http://localhost:3002/employees", {
         id: String(employees.length + 1),
         name: formData.name,
         title: formData.title,
@@ -57,6 +70,10 @@ function Home() {
 
     setEmployees(updatedEmployees);
   };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
