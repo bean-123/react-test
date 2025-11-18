@@ -4,6 +4,7 @@ import "./App.css";
 import About from "./components/About";
 import Home from "./components/Home";
 import Layout from "./Layout";
+import ErrorPage from "./components/ErrorPage";
 
 // function App() {
 //   return (
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "*", //everything that is not in here, will lead to error page
+        element: <ErrorPage />,
       },
     ],
   },

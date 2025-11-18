@@ -16,7 +16,7 @@ function Form({ formData, setFormData, handleClick }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleClick();
-    setFormData({ age: "", name: "", title: "" }); // this wont erase the data in the form after u submit (maybe remove?)
+    setFormData({ age: "", name: "", title: "" });
   };
 
   return (

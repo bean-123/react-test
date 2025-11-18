@@ -4,9 +4,18 @@ import Header from "./components/Header";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        maxHeight: "100%",
+        boxSizing: "border-box",
+      }}
+    >
       <Header />
-      <Outlet />
+      <div style={{ flexGrow: "1", boxSizing: "border-box" }}>
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
