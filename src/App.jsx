@@ -5,6 +5,8 @@ import About from "./components/About";
 import Home from "./components/Home";
 import Layout from "./Layout";
 import ErrorPage from "./components/ErrorPage";
+import Todos from "./components/Todos";
+import SingleEmployee from "./components/SingleEmployee";
 
 // function App() {
 //   return (
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "todos",
+        element: <Todos />,
+      },
+      {
+        path: "employees/:id",
+        element: <SingleEmployee />,
       },
       {
         path: "*", //everything that is not in here, will lead to error page

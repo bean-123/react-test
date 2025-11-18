@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import styles from "./Card.module.css";
 
 const Card = ({
@@ -9,6 +10,7 @@ const Card = ({
   id,
   handleDelete,
 }) => {
+  const navigate = useNavigate();
   // if you deconstruct them here, you can just put {...employee} in app
   return (
     <div className={styles.card}>
@@ -18,6 +20,9 @@ const Card = ({
       <p className={styles.title}>Title: {title} </p>
       <p className={styles.age}>Age: {age}</p>
       <div className={styles.favourite}>{isFavourite && <span>❤️</span>}</div>
+      <button onClick={() => navigate(`/employees/${id}`)}>
+        View Employee
+      </button>
     </div>
   );
 };

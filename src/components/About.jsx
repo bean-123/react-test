@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import styles from "./About.module.css";
 
 const About = () => {
   const navigate = useNavigate();
@@ -8,8 +9,8 @@ const About = () => {
   };
 
   return (
-    <div>
-      <p>
+    <div className={styles.container}>
+      <p className={styles.abouttext}>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
         illo inventore veritatis et quasi architecto beatae vitae dicta sunt
