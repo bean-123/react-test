@@ -2,19 +2,23 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import styles from "./SingleEmployee.module.css";
+import useAxios from "../hooks/useAxios";
 
 const SingleEmployee = () => {
   const { id } = useParams();
   console.log("ID: ", id);
   const [employee, setEmployee] = useState(null);
   console.log("Employee: ", employee);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
     name: employee?.name || "",
     title: employee?.title || "",
     age: employee?.age || "",
   });
+
+  const url = `http://localhost:3002/employees/${id}`;
+  const { data, loading, error } = useAxios(url);
 
   const handleChange = (e) => {
     setFormData((prevState) => {
@@ -39,28 +43,22 @@ const SingleEmployee = () => {
         console.log("Error: ", error.message);
       })
       .finally(() => {
-        setLoading(false);
+        setIsLoading(false);
       });
   };
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3002/employees/${id}`)
-      .then((response) => {
-        setEmployee(response.data);
-        // This sets the edit input fields as what they are
-        setFormData({
-          name: response.data.name,
-          title: response.data.title,
-          age: response.data.age,
-        });
-      })
-      .finally(() => {
-        setLoading(false);
+    if (data) {
+      setEmployee(data);
+      setFormData({
+        name: data.name,
+        title: data.title,
+        age: data.age,
       });
-  }, [id]);
+    }
+  }, [id, data, loading]);
 
-  if (loading) {
+  if (loading || isLoading) {
     return <div>Loading...</div>;
   }
 
@@ -98,7 +96,7 @@ const SingleEmployee = () => {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <h3>Employee Details</h3>
       <p>Name: {employee?.name}</p>
       <p>Title: {employee?.title}</p>

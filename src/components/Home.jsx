@@ -8,6 +8,10 @@ import Footer from "../components/Footer";
 import Form from "../components/Form";
 import axios from "axios";
 import { useSearchParams } from "react-router";
+import { Button } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
+import IconButton from "@mui/material/IconButton/";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 function Home() {
   // const [ count, setCount ] = useCounter; // Using custom hook
@@ -78,6 +82,16 @@ function Home() {
   return (
     <>
       <div>
+        <Button
+          variant="contained"
+          color="limeGreen"
+          startIcon={<DeleteIcon />}
+        >
+          Click me im from MUI!
+        </Button>
+        <IconButton color="primary" aria-label="add to shopping cart">
+          <AddShoppingCartIcon />
+        </IconButton>
         <div className="container">
           {employees.map((employee) => {
             console.log(employee); //if you want to do console.log or any edits the data you need to put this all in {}
