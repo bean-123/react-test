@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router";
 import PropTypes from "prop-types";
 import styles from "./Card.module.css";
+import { Card as MUICard, Button, Typography } from "@mui/material";
+import CustomButton from "./CustomButton";
 
-const Card = ({
+const CardComponent = ({
   // Defining props, but below we are defining them separately which is cleaner
   name,
   title,
@@ -12,25 +14,37 @@ const Card = ({
   id,
   handleDelete,
 }) => {
-  console.log("Card props - ID", id, "Name", name);
   const navigate = useNavigate();
   // if you deconstruct them here, you can just put {...employee} in app
+
   return (
-    <div className={styles.card}>
-      <button onClick={() => toggleFavourite(id)}>Toggle Favourite</button>
-      <button onClick={() => handleDelete(id)}>Delete</button>
-      <h2 className={styles.name}>{name}</h2>
-      <p className={styles.title}>Title: {title} </p>
-      <p className={styles.age}>Age: {age}</p>
+    <MUICard className={styles.card}>
+      {/* Buttons */}
+      <CustomButton variant="contained" onClick={() => toggleFavourite(id)}>
+        Toggle Favourite
+      </CustomButton>
+      <Button variant="contained" onClick={() => handleDelete(id)}>
+        Delete
+      </Button>
+
+      {/* Employee info */}
+      <Typography variant="h6" className={styles.name}>
+        {name}
+      </Typography>
+      <Typography className={styles.title}>Title: {title}</Typography>
+      <Typography className={styles.age}>Age: {age}</Typography>
       <div className={styles.favourite}>{isFavourite && <span>❤️</span>}</div>
-      <button onClick={() => navigate(`/employees/${id}`)}>
+
+      {/* Navigation button */}
+      <Button variant="contained" onClick={() => navigate(`/employees/${id}`)}>
         View Employee
-      </button>
-    </div>
+      </Button>
+    </MUICard>
   );
 };
 
-Card.propTypes = {
+// PropTypes for type checking
+CardComponent.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   age: PropTypes.number.isRequired,
@@ -40,4 +54,4 @@ Card.propTypes = {
   toggleFavourite: PropTypes.func.isRequired,
 };
 
-export default Card;
+export default CardComponent;

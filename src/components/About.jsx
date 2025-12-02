@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import styles from "./About.module.css";
+import CustomKideImage from "./CustomKideImage";
 
 const About = () => {
   const navigate = useNavigate();
@@ -25,6 +26,9 @@ const About = () => {
         quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
         voluptas nulla pariatur?
       </p>
+      <div style={{ width: "100%", height: "500px" }}>
+        <CustomKideImage />
+      </div>
       <button onClick={handleNavigate}>Return to home</button>
     </div>
   );

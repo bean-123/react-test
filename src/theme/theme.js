@@ -1,7 +1,9 @@
+import { Padding } from "@mui/icons-material";
 import { createTheme } from "@mui/material";
 
 const theme = createTheme({
   palette: {
+    mode: "light",
     primary: {
       main: "#e66161ff",
     },
@@ -15,6 +17,16 @@ const theme = createTheme({
   typography: {
     fontFamily: "Roboto, Arial, sans-serif",
   },
+  // components: {
+  //   MuiButton: {
+  //     styleOverrides: {
+  //       root: {
+  //         padding: "2px",
+  //         margin: "2px",
+  //       },
+  //     },
+  //   },
+  // },
 });
 
 export default theme;
