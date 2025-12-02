@@ -17,7 +17,7 @@ const SingleEmployee = () => {
     age: employee?.age || "",
   });
 
-  const url = `http://localhost:3002/employees/${id}`;
+  const url = `https://react-test-1of0.onrender.com/employees/${id}`;
   const { data, loading, error } = useAxios(url);
 
   const handleChange = (e) => {
@@ -33,7 +33,7 @@ const SingleEmployee = () => {
 
   const handleSave = () => {
     axios
-      .put(`http://localhost:3002/employees/${id}`, formData) // .put edits the info
+      .put(`https://react-test-1of0.onrender.com/employees/${id}`, formData) // .put edits the info
       .then((response) => {
         setEmployee(response.data); // If you dont have this, it wont update it untill u refresh the page !!!!!
         setIsEditing(false);

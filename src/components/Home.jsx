@@ -29,7 +29,7 @@ function Home() {
     //common error when handling loading state:
     //setLoading(true)
     axios
-      .get("http://localhost:3002/employees")
+      .get("https://react-test-1of0.onrender.com/employees")
       .then((response) => {
         setEmployees(response.data);
       })
@@ -42,14 +42,16 @@ function Home() {
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3002/employees/${id}`).then(() => {
-      setEmployees(employees.filter((employee) => employee.id !== id));
-    });
+    axios
+      .delete(`https://react-test-1of0.onrender.com/employees/${id}`)
+      .then(() => {
+        setEmployees(employees.filter((employee) => employee.id !== id));
+      });
   };
 
   const handleClick = () => {
     axios
-      .post("http://localhost:3002/employees", {
+      .post("https://react-test-1of0.onrender.com/employees", {
         id: String(employees.length + 1),
         name: formData.name,
         title: formData.title,
