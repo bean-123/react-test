@@ -12,6 +12,9 @@ import { Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton/";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import EmployeesTable from "./EmployeesTable";
+import ToggleButton from "./Togglebutton";
+import Charactercount from "./Charactercount";
 
 function Home() {
   // const [ count, setCount ] = useCounter; // Using custom hook
@@ -83,6 +86,8 @@ function Home() {
 
   return (
     <>
+      <ToggleButton />
+      <Charactercount />
       <div>
         <Button
           variant="contained"
@@ -121,6 +126,7 @@ function Home() {
             handleClick={handleClick}
           />
         </div>
+        <EmployeesTable />
       </div>
     </>
   );
