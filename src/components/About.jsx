@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import styles from "./About.module.css";
 import CustomKideImage from "./CustomKideImage";
+import EmployeeDataGrid from "./EmployeeDataGrid";
 
 const About = () => {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ const About = () => {
 
   return (
     <div className={styles.container}>
+      <EmployeeDataGrid />
       <p className={styles.abouttext}>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
@@ -26,7 +28,7 @@ const About = () => {
         quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
         voluptas nulla pariatur?
       </p>
-      <div style={{ width: "100%", height: "500px" }}>
+      <div style={{ width: "100%", height: "500px", margin: "20px" }}>
         <CustomKideImage />
       </div>
       <button onClick={handleNavigate}>Return to home</button>

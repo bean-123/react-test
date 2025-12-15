@@ -30,6 +30,9 @@ const Header = () => {
           <Button color="inherit" component={Link} to="/todos">
             Todos
           </Button>
+          <Button color="inherit" component={Link} to="/tasks">
+            Tasks
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>

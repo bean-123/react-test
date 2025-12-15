@@ -7,6 +7,7 @@ import Layout from "./Layout";
 import ErrorPage from "./components/ErrorPage";
 import Todos from "./components/Todos";
 import SingleEmployee from "./components/SingleEmployee";
+import Tasks from "./components/Tasks";
 
 // function App() {
 //   return (
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "todos",
         element: <Todos />,
+      },
+      {
+        path: "tasks",
+        element: <Tasks />,
       },
       {
         path: "employees/:id",

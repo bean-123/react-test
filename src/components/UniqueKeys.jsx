@@ -1,7 +1,13 @@
+const tasks = ["Buy milk", "Walk dog", "Study React"];
+
 const UniqueKeys = () => {
   return (
     <ul>
-      <li></li>
+      {tasks.map((task, index) => (
+        <li key={task} onClick={() => console.log(task)}>
+          {task}
+        </li>
+      ))}
     </ul>
   );
 };

@@ -86,8 +86,6 @@ function Home() {
 
   return (
     <>
-      <ToggleButton />
-      <Charactercount />
       <div>
         <Button
           variant="contained"

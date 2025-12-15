@@ -1,9 +1,9 @@
 {
   "employees": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Maria Andersson",
-      "position": "Senior Developer",
+      "position": "Junior Developer",
       "department": "Engineering",
       "salary": 85000,
       "email": "maria.andersson@company.com",
@@ -13,10 +13,14 @@
       "location": "Stockholm",
       "age": 29,
       "manager": "Sarah Johnson",
-      "skills": ["React", "TypeScript", "Node.js"]
+      "skills": [
+        "React",
+        "TypeScript",
+        "Node.js"
+      ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Kati Kivinen",
       "position": "Frontend Developer",
       "department": "Engineering",
@@ -28,10 +32,14 @@
       "location": "Helsinki",
       "age": 25,
       "manager": "Sarah Johnson",
-      "skills": ["React", "JavaScript", "CSS"]
+      "skills": [
+        "React",
+        "JavaScript",
+        "CSS"
+      ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Karin Lindberg",
       "position": "UX Designer",
       "department": "Design",
@@ -43,10 +51,14 @@
       "location": "Gothenburg",
       "age": 45,
       "manager": "Emma Nilsson",
-      "skills": ["Figma", "User Research", "Prototyping"]
+      "skills": [
+        "Figma",
+        "User Research",
+        "Prototyping"
+      ]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Sarah Johnson",
       "position": "Engineering Manager",
       "department": "Engineering",
@@ -58,10 +70,14 @@
       "location": "New York",
       "age": 38,
       "manager": "Michael Chen",
-      "skills": ["Leadership", "Project Management", "System Design"]
+      "skills": [
+        "Leadership",
+        "Project Management",
+        "System Design"
+      ]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Emma Nilsson",
       "position": "Design Director",
       "department": "Design",
@@ -73,10 +89,14 @@
       "location": "Stockholm",
       "age": 42,
       "manager": "Michael Chen",
-      "skills": ["Design Strategy", "Team Leadership", "Brand Identity"]
+      "skills": [
+        "Design Strategy",
+        "Team Leadership",
+        "Brand Identity"
+      ]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Michael Chen",
       "position": "CTO",
       "department": "Executive",
@@ -88,10 +108,14 @@
       "location": "San Francisco",
       "age": 50,
       "manager": null,
-      "skills": ["Strategic Planning", "Technology Leadership", "Architecture"]
+      "skills": [
+        "Strategic Planning",
+        "Technology Leadership",
+        "Architecture"
+      ]
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "James Wilson",
       "position": "Backend Developer",
       "department": "Engineering",
@@ -103,10 +127,14 @@
       "location": "Austin",
       "age": 32,
       "manager": "Sarah Johnson",
-      "skills": ["Python", "Django", "PostgreSQL"]
+      "skills": [
+        "Python",
+        "Django",
+        "PostgreSQL"
+      ]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Lisa Bergström",
       "position": "Product Manager",
       "department": "Product",
@@ -118,10 +146,14 @@
       "location": "Stockholm",
       "age": 35,
       "manager": "Michael Chen",
-      "skills": ["Product Strategy", "Agile", "Data Analysis"]
+      "skills": [
+        "Product Strategy",
+        "Agile",
+        "Data Analysis"
+      ]
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "David Martinez",
       "position": "DevOps Engineer",
       "department": "Engineering",
@@ -133,10 +165,15 @@
       "location": "Seattle",
       "age": 28,
       "manager": "Sarah Johnson",
-      "skills": ["AWS", "Docker", "Kubernetes", "CI/CD"]
+      "skills": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD"
+      ]
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Anna Kowalski",
       "position": "QA Engineer",
       "department": "Engineering",
@@ -148,10 +185,14 @@
       "location": "Warsaw",
       "age": 27,
       "manager": "Sarah Johnson",
-      "skills": ["Test Automation", "Selenium", "Jest"]
+      "skills": [
+        "Test Automation",
+        "Selenium",
+        "Jest"
+      ]
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Robert Thompson",
       "position": "Marketing Manager",
       "department": "Marketing",
@@ -163,10 +204,14 @@
       "location": "Chicago",
       "age": 33,
       "manager": "Michael Chen",
-      "skills": ["Digital Marketing", "SEO", "Content Strategy"]
+      "skills": [
+        "Digital Marketing",
+        "SEO",
+        "Content Strategy"
+      ]
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Sophie Dubois",
       "position": "Data Analyst",
       "department": "Analytics",
@@ -178,10 +223,15 @@
       "location": "Paris",
       "age": 30,
       "manager": "Michael Chen",
-      "skills": ["SQL", "Python", "Tableau", "Statistics"]
+      "skills": [
+        "SQL",
+        "Python",
+        "Tableau",
+        "Statistics"
+      ]
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Tommi Virtanen",
       "position": "Full Stack Developer",
       "department": "Engineering",
@@ -193,10 +243,15 @@
       "location": "Tampere",
       "age": 31,
       "manager": "Sarah Johnson",
-      "skills": ["React", "Node.js", "MongoDB", "GraphQL"]
+      "skills": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "GraphQL"
+      ]
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Nina Hansen",
       "position": "HR Manager",
       "department": "Human Resources",
@@ -208,10 +263,14 @@
       "location": "Copenhagen",
       "age": 36,
       "manager": "Michael Chen",
-      "skills": ["Recruitment", "Employee Relations", "HRIS"]
+      "skills": [
+        "Recruitment",
+        "Employee Relations",
+        "HRIS"
+      ]
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Carlos Rodriguez",
       "position": "Sales Representative",
       "department": "Sales",
@@ -223,10 +282,14 @@
       "location": "Madrid",
       "age": 26,
       "manager": "Michael Chen",
-      "skills": ["CRM", "Negotiation", "Client Relations"]
+      "skills": [
+        "CRM",
+        "Negotiation",
+        "Client Relations"
+      ]
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Yuki Tanaka",
       "position": "Mobile Developer",
       "department": "Engineering",
@@ -238,10 +301,15 @@
       "location": "Tokyo",
       "age": 29,
       "manager": "Sarah Johnson",
-      "skills": ["React Native", "iOS", "Android", "Swift"]
+      "skills": [
+        "React Native",
+        "iOS",
+        "Android",
+        "Swift"
+      ]
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Amanda Foster",
       "position": "Content Writer",
       "department": "Marketing",
@@ -253,10 +321,14 @@
       "location": "Boston",
       "age": 24,
       "manager": "Robert Thompson",
-      "skills": ["Content Writing", "SEO", "Social Media"]
+      "skills": [
+        "Content Writing",
+        "SEO",
+        "Social Media"
+      ]
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Lars Johansen",
       "position": "Security Engineer",
       "department": "Engineering",
@@ -268,10 +340,14 @@
       "location": "Oslo",
       "age": 37,
       "manager": "Sarah Johnson",
-      "skills": ["Cybersecurity", "Penetration Testing", "Security Audits"]
+      "skills": [
+        "Cybersecurity",
+        "Penetration Testing",
+        "Security Audits"
+      ]
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Julia Schmidt",
       "position": "Business Analyst",
       "department": "Product",
@@ -290,7 +366,7 @@
       ]
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Alex Petrov",
       "position": "Junior Developer",
       "department": "Engineering",
@@ -302,7 +378,11 @@
       "location": "Moscow",
       "age": 23,
       "manager": "Sarah Johnson",
-      "skills": ["JavaScript", "HTML", "CSS"]
+      "skills": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ]
     }
   ],
   "somethingElse": [
