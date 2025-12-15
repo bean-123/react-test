@@ -1,4 +1,6 @@
 import Charactercount from "./Charactercount";
+import FilteredList from "./FilteredList";
+import FormTask from "./FormTask";
 import Loader from "./Loader";
 import Parent from "./ParentChildProp";
 import Togglebutton from "./Togglebutton";
@@ -15,8 +17,12 @@ const Tasks = () => {
       <UniqueKeys />
       <h2>4. Parent-Child task</h2>
       <Parent />
-      <h2>Conditional rendering based on state</h2>
+      <h2>5. Conditional rendering based on state</h2>
       <Loader />
+      <h2>6. Simple filtered list</h2>
+      <FilteredList />
+      <h2>7. Form validation</h2>
+      <FormTask />
     </>
   );
 };
